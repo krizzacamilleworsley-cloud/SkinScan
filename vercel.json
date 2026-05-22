@@ -2,7 +2,10 @@
   "buildCommand": "npm run build",
   "installCommand": "npm install --legacy-peer-deps",
   "framework": null,
-  "outputDirectory": ".output/public",
+  "outputDirectory": "dist/client",
+  "rewrites": [
+    { "source": "/((?!assets/).*)", "destination": "/index.html" }
+  ],
   "headers": [
     {
       "source": "/sw.js",
